@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
           height: MediaQuery.of(context).size.height,
           width:MediaQuery.of(context).size.width,
           child: Center(
-            child: Text('Hello World',style: TextStyle(fontSize: 48,fontWeight: FontWeight.bold),)
+            child: Text('Hello Worlds',style: TextStyle(fontSize: 48,fontWeight: FontWeight.bold),)
           )
       ),
     );
