@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tenth_fifth_pays/Controller/Signup%20Page/signup_page_controller.dart';
+import 'package:tenth_fifth_pays/View/OTP%20Screens/otp_sent_page.dart';
 import 'package:tenth_fifth_pays/View/Utils/app_logo.dart';
 import 'package:tenth_fifth_pays/View/Utils/colors.dart';
 import 'package:tenth_fifth_pays/View/Widgets/textfields.dart';
@@ -130,7 +131,7 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           child: Text('Register',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
                           onPressed: (){
-
+                            Get.to(OTPSentPage(email: _signUpController.emailController.text,));
                           },
                         ),
                       ),
@@ -140,7 +141,7 @@ class _SignupPageState extends State<SignupPage> {
                     padding:  EdgeInsets.only(
                       top: height*0.05,
                     ),
-                    child: Center(child: Text('Already have an account?',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w600))),
+                    child: Center(child: Text('Already have an account?',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
                   ),
                   Center(
                     child: TextButton(
