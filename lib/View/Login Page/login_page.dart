@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                           top: height*0.06
                       ),
                       child: CustomTextField(
-                        label: 'Email',
+                        label: 'Email.',
                         controller: _loginPageController.emailController,
                         obscureText: false,
                       ),
