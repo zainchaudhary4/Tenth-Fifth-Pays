@@ -1,22 +1,23 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Utils/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
+  final String? hintText;
   final TextEditingController controller;
   final bool obscureText;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.label,
     required this.controller,
-    required this.obscureText
-  }) : super(key: key);
+    required this.obscureText,
+    this.hintText
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width*0.77,
       child: TextField(
         controller: controller,
@@ -25,6 +26,7 @@ class CustomTextField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
           labelText: label,
+          hintText: hintText,
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(
@@ -34,7 +36,7 @@ class CustomTextField extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                   color: Colors.grey,
                   width: 1.5
               )
