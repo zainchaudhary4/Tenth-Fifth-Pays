@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '../Utils/colors.dart';
 
 class CustomTextField extends StatelessWidget {
-  final String label;
+  final String? label;
   final String? hintText;
   final TextEditingController controller;
   final bool obscureText;
 
   const CustomTextField({
     super.key,
-    required this.label,
+    this.label,
     required this.controller,
-    required this.obscureText,
+    this.obscureText = false,
     this.hintText
   });
 
