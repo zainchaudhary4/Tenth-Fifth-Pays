@@ -4,14 +4,10 @@ import 'package:tenth_fifth_pays/Controller/User%20Profile%20Page/user_profile_c
 import 'package:get/get.dart';
 import '../Widgets/textfields.dart';
 
-class EditProfilePage extends StatefulWidget{
-  @override
-  State<EditProfilePage> createState() => _EditProfilePageState();
-}
+class EditProfilePage extends StatelessWidget{
+  EditProfilePage({super.key});
 
-class _EditProfilePageState extends State<EditProfilePage> {
-
-  UserProfileController _userProfileController = Get.put(UserProfileController());
+  final UserProfileController _userProfileController = Get.put(UserProfileController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +22,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
               top: height*0.03,
               left: width*0.04,
             ),
-            child: Text('Edit Profile',style: TextStyle(fontFamily: 'Arial',fontSize: 19,fontWeight: FontWeight.w600)),
+            child: const Text('Edit Profile',style: TextStyle(fontFamily: 'Arial',fontSize: 19,fontWeight: FontWeight.w600)),
           ),
           Padding(
             padding:  EdgeInsets.only(
