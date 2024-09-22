@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tenth_fifth_pays/View/Signup%20Page/signup_page.dart';
 import 'package:tenth_fifth_pays/View/Terms&Condition%20License%20Page/terms_&_conditions_page.dart';
@@ -10,12 +9,14 @@ import '../../Controller/Login Page/login_page_controller.dart';
 
 
 class LoginPage extends StatefulWidget{
+  const LoginPage({super.key});
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  LoginPageController _loginPageController= Get.put(LoginPageController());
+  final LoginPageController _loginPageController= Get.put(LoginPageController());
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                           style: ElevatedButton.styleFrom(
                               backgroundColor: AppPrimaryColor.primaryColor
                           ),
-                          child: Text('Login',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
+                          child: const Text('Login',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
                           onPressed: (){
                              Get.to(TermsAndConditionsPage());
                           },
@@ -90,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding:  EdgeInsets.only(
                       top: height*0.05,
                     ),
-                    child: Center(child: Text('Don\'t have an account?',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
+                    child: const Center(child: Text('Don\'t have an account?',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
                   ),
                   Center(
                     child: TextButton(
@@ -104,14 +105,14 @@ class _LoginPageState extends State<LoginPage> {
                     padding:  EdgeInsets.only(
                       top: height*0.03,
                     ),
-                    child: Center(child: Text('Check below to accept the',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
+                    child: const Center(child: Text('Check below to accept the',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
                   ),
                   Padding(
                     padding:  EdgeInsets.only(
                       right: width*0.07,
                       left: width*0.07
                     ),
-                    child: Center(child: Text('Fifth Tenth Pays Terms & Conditions\n               and Privacy Policy',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
+                    child: const Center(child: Text('Fifth Tenth Pays Terms & Conditions\n               and Privacy Policy',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500))),
                   ),
                   Padding(
                     padding:  EdgeInsets.only(
@@ -132,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                             checkColor: Colors.white,
                           )),
                         ),
-                        Flexible(
+                        const Flexible(
                             child: Text('I accept Tenth Fifth Pays Terms and Conditions',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500)))
                       ],
                     ),
@@ -156,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                             checkColor: Colors.white, // Tick mark color
                           )),
                         ),
-                        Flexible(
+                        const Flexible(
                             child: Text('I accept Tenth Fifth Pays Privacy Policy',style: TextStyle(fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w500)))
                       ],
                     ),
