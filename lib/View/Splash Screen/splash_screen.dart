@@ -138,7 +138,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         ),
                         child: Text('Let\'s Get Started',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
                         onPressed: (){
-                          Get.to(SignupPage());
+                          Get.offAll(SignupPage());
                         },
                       ),
                     ),

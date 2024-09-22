@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tenth_fifth_pays/Controller/Signup%20Page/signup_page_controller.dart';
+import 'package:tenth_fifth_pays/View/Login%20Page/login_page.dart';
 import 'package:tenth_fifth_pays/View/OTP%20Screens/otp_sent_page.dart';
 import 'package:tenth_fifth_pays/View/Utils/app_logo.dart';
 import 'package:tenth_fifth_pays/View/Utils/colors.dart';
@@ -146,7 +147,7 @@ class _SignupPageState extends State<SignupPage> {
                   Center(
                     child: TextButton(
                         onPressed: (){
-
+                          Get.offAll(LoginPage());
                         },
                         child: Text('Login here',style: TextStyle(color: AppPrimaryColor.secondaryButtonColor,fontFamily: 'Arial',fontSize: 18,fontWeight: FontWeight.w600),)
                     ),
