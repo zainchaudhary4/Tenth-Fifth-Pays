@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tenth_fifth_pays/View/Signup%20Page/signup_page.dart';
 import 'package:tenth_fifth_pays/View/Utils/app_logo.dart';
 import 'package:tenth_fifth_pays/View/Utils/colors.dart';
 import 'package:get/get.dart';
+import '../Onboarding Page/onboarding_page.dart';
 
 class PrivacyPolicyPage extends StatefulWidget{
   @override
@@ -107,7 +107,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                           ),
                           child: Text('Next',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
                           onPressed: (){
-
+                            Get.to(OnboardingPage());
                           },
                         ),
                       ),

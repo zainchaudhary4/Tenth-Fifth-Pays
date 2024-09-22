@@ -12,7 +12,7 @@ class PhotographicReleasePage extends StatelessWidget{
   final height = MediaQuery.of(context).size.height;
   final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
       body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width *0.05),

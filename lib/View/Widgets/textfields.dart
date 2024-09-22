@@ -3,16 +3,16 @@ import '../Utils/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final String? label;
-  final String? hintText;
   final TextEditingController controller;
   final bool obscureText;
+  final TextInputType textInputType;
 
   const CustomTextField({
     super.key,
-    this.label,
+    required this.label,
     required this.controller,
     this.obscureText = false,
-    this.hintText
+    required this.textInputType
   });
 
   @override
@@ -22,11 +22,10 @@ class CustomTextField extends StatelessWidget {
       child: TextField(
         controller: controller,
         cursorColor: AppPrimaryColor.primaryColor,
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: textInputType,
         obscureText: obscureText,
         decoration: InputDecoration(
           labelText: label,
-          hintText: hintText,
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(

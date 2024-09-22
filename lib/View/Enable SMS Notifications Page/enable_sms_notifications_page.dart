@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tenth_fifth_pays/View/Photographic%20Release%20Page/photographic_release_page.dart';
 import 'package:tenth_fifth_pays/View/Utils/colors.dart';
+import 'package:get/get.dart';
 
 class EnableSmsNotificationsPage extends StatelessWidget{
   const EnableSmsNotificationsPage({super.key});
@@ -8,7 +10,7 @@ class EnableSmsNotificationsPage extends StatelessWidget{
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
       body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width*0.05),
@@ -23,26 +25,47 @@ class EnableSmsNotificationsPage extends StatelessWidget{
                 const Text("SMS notifications are used to process and provide updates on your order. "
                     "They are required to allow App to function properly.",
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 22),),
+                  style: TextStyle(fontSize: 19),),
                 SizedBox(height: height*0.25,),
-                ElevatedButton(
-                    onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: AppPrimaryColor.primaryColor
-                  ),
-                  child: Text("Enable",
-                    style: TextStyle(color: AppPrimaryColor.secondaryButtonColor,fontFamily: 'Arial', fontSize: 22),
+                Center(
+                  child: Padding(
+                    padding:  EdgeInsets.only(
+                        top: height*0.04
                     ),
+                    child: SizedBox(
+                      height: height*0.06,
+                      width: width*0.77,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: AppPrimaryColor.primaryColor
+                        ),
+                        child: Text('Enable',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
+                        onPressed: (){
+                           Get.to(PhotographicReleasePage());
+                        },
+                      ),
+                    ),
+                  ),
                 ),
-                SizedBox(height: height*0.01,),
-                ElevatedButton(
-                    onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: AppPrimaryColor.primaryColor
-                  ),
-                  child: Text("Don't Enable (Exists)",
-                      style: TextStyle(color: AppPrimaryColor.secondaryButtonColor,fontFamily: 'Arial', fontSize: 22)
+                Center(
+                  child: Padding(
+                    padding:  EdgeInsets.only(
+                        top: height*0.02
                     ),
+                    child: SizedBox(
+                      height: height*0.06,
+                      width: width*0.77,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: AppPrimaryColor.primaryColor
+                        ),
+                        child: Text('Don\'t Enable (Exists)',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
+                        onPressed: (){
+                          // Get.to(EnableSmsNotificationsPage());
+                        },
+                      ),
+                    ),
+                  ),
                 ),
                 SizedBox(height: height*0.1,),
               ],
