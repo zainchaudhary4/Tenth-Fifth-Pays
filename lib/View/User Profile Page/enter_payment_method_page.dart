@@ -1,18 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tenth_fifth_pays/Controller/User%20Profile%20Page/user_profile_controller.dart';
 import 'package:get/get.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
-class EnterPaymentMethodPage extends StatefulWidget{
-  @override
-  State<EnterPaymentMethodPage> createState() => _EnterPaymentMethodPageState();
-}
+class EnterPaymentMethodPage extends StatelessWidget{
+  EnterPaymentMethodPage({super.key});
 
-class _EnterPaymentMethodPageState extends State<EnterPaymentMethodPage> {
-
-  UserProfileController _userProfileController = Get.put(UserProfileController());
+  final UserProfileController _userProfileController = Get.put(UserProfileController());
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +22,14 @@ class _EnterPaymentMethodPageState extends State<EnterPaymentMethodPage> {
             top: height*0.03,
             left: width*0.04,
           ),
-          child: Text('Enter Payment Method',style: TextStyle(fontFamily: 'Arial',fontSize: 19,fontWeight: FontWeight.w600)),
+          child: const Text('Enter Payment Method',style: TextStyle(fontFamily: 'Arial',fontSize: 19,fontWeight: FontWeight.w600)),
         ),
         Padding(
           padding:  EdgeInsets.only(
             top: height*0.02,
             left: width*0.04,
           ),
-          child: Text('Select only 1',style: TextStyle(fontFamily: 'Arial',fontSize: 19,)),
+          child: const Text('Select only 1',style: TextStyle(fontFamily: 'Arial',fontSize: 19,)),
         ),
         Padding(
           padding:  EdgeInsets.only(
@@ -55,7 +50,7 @@ class _EnterPaymentMethodPageState extends State<EnterPaymentMethodPage> {
           ),
           child: CustomTextField(
             label: 'Acct/Card Number',
-            controller: _userProfileController.accNumController,
+            controller: _userProfileController.accNumberController,
             obscureText: false,
             textInputType: TextInputType.number,
           ),
@@ -65,20 +60,20 @@ class _EnterPaymentMethodPageState extends State<EnterPaymentMethodPage> {
             top: height*0.02,
             left: width*0.04,
           ),
-          child: Text('Expiry Date',style: TextStyle(fontFamily: 'Arial',fontSize: 14,fontWeight: FontWeight.w600),),
+          child: const Text('Expiry Date',style: TextStyle(fontFamily: 'Arial',fontSize: 14,fontWeight: FontWeight.w600),),
         ),
         Padding(
             padding:  EdgeInsets.only(
               top: height*0.02,
               left: width*0.04,
             ),
-            child: Container(
+            child: SizedBox(
               width: width*0.24,
               child: TextField(
                 controller: _userProfileController.expDateController,
                 decoration: InputDecoration(
                   hintText: '19/25',
-                  hintStyle: TextStyle(fontSize: 14),
+                  hintStyle: const TextStyle(fontSize: 14),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(
