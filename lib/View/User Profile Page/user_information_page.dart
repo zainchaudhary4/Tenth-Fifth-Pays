@@ -5,14 +5,9 @@ import 'package:get/get.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
-class UserInformationPage extends StatefulWidget{
-  @override
-  State<UserInformationPage> createState() => _UserInformationPageState();
-}
+class UserInformationPage extends StatelessWidget{
 
-class _UserInformationPageState extends State<UserInformationPage> {
-
-  UserProfileController _userProfileController = Get.put(UserProfileController());
+  final UserProfileController _userProfileController = Get.put(UserProfileController());
 
   @override
   Widget build(BuildContext context) {

@@ -7,16 +7,10 @@ import 'package:tenth_fifth_pays/View/Widgets/textfields.dart';
 import 'package:get/get.dart';
 import '../../Controller/Login Page/login_page_controller.dart';
 
+class LoginPage extends StatelessWidget{
+   LoginPage({super.key});
 
-class LoginPage extends StatefulWidget{
-  const LoginPage({super.key});
-
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  final LoginPageController _loginPageController= Get.put(LoginPageController());
+   final LoginPageController _loginPageController= Get.put(LoginPageController());
 
   @override
   Widget build(BuildContext context) {

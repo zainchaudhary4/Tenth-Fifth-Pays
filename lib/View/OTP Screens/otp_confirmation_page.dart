@@ -6,14 +6,9 @@ import 'package:tenth_fifth_pays/View/Utils/colors.dart';
 import 'package:get/get.dart';
 
 
-class OtpConfirmationPage extends StatefulWidget{
+class OtpConfirmationPage extends StatelessWidget{
   OtpConfirmationPage({super.key,});
 
-  @override
-  State<OtpConfirmationPage> createState() => _OTPConfirmationPageState();
-}
-
-class _OTPConfirmationPageState extends State<OtpConfirmationPage> {
 
   @override
   Widget build(BuildContext context) {

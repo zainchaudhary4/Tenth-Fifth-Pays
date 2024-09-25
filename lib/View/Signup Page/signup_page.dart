@@ -9,13 +9,9 @@ import 'package:tenth_fifth_pays/View/Widgets/textfields.dart';
 import 'package:get/get.dart';
 
 
-class SignupPage extends StatefulWidget{
-  @override
-  State<SignupPage> createState() => _SignupPageState();
-}
+class SignupPage extends StatelessWidget{
 
-class _SignupPageState extends State<SignupPage> {
-  SignUpController _signUpController= Get.put(SignUpController());
+  final SignUpController _signUpController= Get.put(SignUpController());
 
   @override
   Widget build(BuildContext context) {

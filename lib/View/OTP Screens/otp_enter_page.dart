@@ -16,7 +16,7 @@ class OTPEnterPage extends StatefulWidget{
 }
 
 class _OTPEnterPageState extends State<OTPEnterPage> {
-  VerifyOTPController _verifyOTPController = Get.put(VerifyOTPController());
+  final VerifyOTPController _verifyOTPController = Get.put(VerifyOTPController());
 
 
   @override

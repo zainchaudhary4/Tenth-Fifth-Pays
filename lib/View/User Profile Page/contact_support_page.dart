@@ -1,17 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tenth_fifth_pays/Controller/User%20Profile%20Page/user_profile_controller.dart';
-import 'package:get/get.dart';
 
 
-class ContactSupportPage extends StatefulWidget{
-  @override
-  State<ContactSupportPage> createState() => _ContactSupportPageState();
-}
 
-class _ContactSupportPageState extends State<ContactSupportPage> {
-
-  UserProfileController _userProfileController = Get.put(UserProfileController());
+class ContactSupportPage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {

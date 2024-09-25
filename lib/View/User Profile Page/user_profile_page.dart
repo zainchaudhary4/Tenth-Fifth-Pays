@@ -8,16 +8,9 @@ import 'package:tenth_fifth_pays/View/User%20Profile%20Page/enter_payment_method
 import 'package:tenth_fifth_pays/View/User%20Profile%20Page/user_information_page.dart';
 import 'package:tenth_fifth_pays/View/Utils/app_logo.dart';
 import 'package:get/get.dart';
-
 import '../Utils/colors.dart';
 
-class UserProfilePage extends StatefulWidget{
-  @override
-  State<UserProfilePage> createState() => _UserProfilePageState();
-}
-
-class _UserProfilePageState extends State<UserProfilePage> {
-
+class UserProfilePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {

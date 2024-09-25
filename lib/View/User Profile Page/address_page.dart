@@ -5,14 +5,10 @@ import 'package:get/get.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
-class AddressPage extends StatefulWidget{
-  @override
-  State<AddressPage> createState() => _AddressPageState();
-}
+class AddressPage extends StatelessWidget{
 
-class _AddressPageState extends State<AddressPage> {
 
-  UserProfileController _userProfileController = Get.put(UserProfileController());
+  final UserProfileController _userProfileController = Get.put(UserProfileController());
 
   @override
   Widget build(BuildContext context) {

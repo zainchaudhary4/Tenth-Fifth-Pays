@@ -4,11 +4,14 @@ import 'package:get/get.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
-class EnterPaymentMethodPage extends StatelessWidget{
+class EnterPaymentMethodPage extends StatefulWidget{
   EnterPaymentMethodPage({super.key});
-
+  @override
+  State<EnterPaymentMethodPage> createState() => _EnterPaymentMethodPageState();
+}
+class _EnterPaymentMethodPageState extends State<EnterPaymentMethodPage> {
   final UserProfileController _userProfileController = Get.put(UserProfileController());
-
+String? paymentMethod;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -30,6 +33,72 @@ class EnterPaymentMethodPage extends StatelessWidget{
             left: width*0.04,
           ),
           child: const Text('Select only 1',style: TextStyle(fontFamily: 'Arial',fontSize: 19,)),
+        ),
+        Padding(
+          padding:  EdgeInsets.only(
+            top: height*0.02,
+            left: width*0.04,
+          ),
+          child:  Column(
+            children: [
+              Row(
+                children: [
+                   Radio(
+                    value: 'Credit',
+                    groupValue: paymentMethod,
+                    onChanged: (value){
+                      setState(() {
+                        paymentMethod= value.toString();
+                      });
+                    },
+                  ),
+                  Text('Credit',style: TextStyle(fontFamily: 'Arial',fontSize: 19),)
+                ],
+              ),
+              Row(
+                children: [
+                  Radio(
+                    value: 'Debit',
+                    groupValue: paymentMethod,
+                    onChanged: (value){
+                      setState(() {
+                        paymentMethod= value.toString();
+                      });
+                    },
+                  ),
+                  Text('Debit',style: TextStyle(fontFamily: 'Arial',fontSize: 19),)
+                ],
+              ),
+              Row(
+                children: [
+                  Radio(
+                    value: 'Google Pay',
+                    groupValue: paymentMethod,
+                    onChanged: (value){
+                      setState(() {
+                        paymentMethod= value.toString();
+                      });
+                    },
+                  ),
+                  Text('Google Pay',style: TextStyle(fontFamily: 'Arial',fontSize: 19),)
+                ],
+              ),
+              Row(
+                children: [
+                  Radio(
+                    value: 'Apple Pay',
+                    groupValue: paymentMethod,
+                    onChanged: (value){
+                      setState(() {
+                        paymentMethod= value.toString();
+                      });
+                    },
+                  ),
+                  Text('Apple Pay',style: TextStyle(fontFamily: 'Arial',fontSize: 19),)
+                ],
+              ),
+            ],
+          )
         ),
         Padding(
           padding:  EdgeInsets.only(
