@@ -19,7 +19,7 @@ class CustomToggleButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.0),
           color: toggleController.isToggled.value
-              ? Colors.grey
+              ? Colors.grey.shade200
               : Colors.grey.shade300, // Background color change
         ),
         child: AnimatedAlign(
@@ -33,7 +33,7 @@ class CustomToggleButton extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: toggleController.isToggled.value
-                  ? Colors.red.shade300
+                  ? Colors.indigo.shade300
                   : Colors.red, // Circle color change
             ),
           ),
