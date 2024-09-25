@@ -10,7 +10,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    final _phoneNumberController = PhoneNumberController();
+    final phoneNumberController = PhoneNumberController();
     return Scaffold(
         body: SafeArea(
         child: Padding(
@@ -33,7 +33,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                       ),
                       child: CustomTextField(
                         label: 'Enter Current Phone Number',
-                        controller: _phoneNumberController.currentPhoneNumController,
+                        controller: phoneNumberController.currentPhoneNumController,
                         obscureText: false,
                         textInputType: TextInputType.text,
                       ),
@@ -45,7 +45,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                       ),
                       child: CustomTextField(
                         label: 'Enter New Phone Number',
-                        controller: _phoneNumberController.newPhoneNumController,
+                        controller: phoneNumberController.newPhoneNumController,
                         obscureText: false,
                         textInputType: TextInputType.text,
                       ),
@@ -57,7 +57,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                       ),
                       child: CustomTextField(
                         label: 'Re-Enter New Phone Number',
-                        controller: _phoneNumberController.reEnterPhoneNumController,
+                        controller: phoneNumberController.reEnterPhoneNumController,
                         obscureText: false,
                         textInputType: TextInputType.text,
                       ),

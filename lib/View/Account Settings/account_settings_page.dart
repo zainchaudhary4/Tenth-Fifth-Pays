@@ -3,7 +3,6 @@ import 'package:tenth_fifth_pays/View/Account%20Settings/manage_your_account.dar
 import 'package:tenth_fifth_pays/View/Account%20Settings/manage_your_connected_accounts.dart';
 import 'package:tenth_fifth_pays/View/Account%20Settings/manage_your_payment_methods.dart';
 import 'package:tenth_fifth_pays/View/Account%20Settings/update_your_personal_information.dart';
-
 import '../Utils/colors.dart';
 import '../Widgets/custom_toggle_button.dart';
 
