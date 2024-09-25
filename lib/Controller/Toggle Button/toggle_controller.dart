@@ -1,3 +1,4 @@
+import 'package:get/get_core/get_core.dart';
 import 'package:get/get.dart';
 
 class ToggleController extends GetxController {
