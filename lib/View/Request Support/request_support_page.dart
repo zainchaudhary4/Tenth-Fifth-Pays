@@ -17,81 +17,85 @@ class RequestSupportPage extends StatelessWidget{
       body: SafeArea(
         child: Padding(
         padding: const EdgeInsets.all(4),
-        child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Text("Request Support", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold)),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:  EdgeInsets.only(
-                        left: width*0.04,
-                        top: height*0.03
-                    ),
-                    child: CustomTextField(
-                      label: 'Name',
-                      controller: reqController.nameController,
-                      textInputType: TextInputType.text,
-                    ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.only(
-                      top: height*0.02,
-                      left: width*0.04,
-                    ),
-                    child: CustomTextField(
-                      label: 'Email',
-                      controller: reqController.emailController,
-                      textInputType: TextInputType.emailAddress,
-                    ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.only(
-                      top: height*0.01,
-                      left: width*0.05,
-                    ),
-                    child: CustomTextField(
-                      label: 'Phone',
-                      controller: reqController.phoneController,
-                      textInputType: TextInputType.phone,
-                    ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.only(
-                      top: height*0.01,
-                      left: width*0.05,
-                    ),
-                    child: CustomTextField(
-                      label: 'Message',
-                      controller: reqController.messageController,
-                      textInputType: TextInputType.text,
-                    ),
-                  ),
-                ],
-              ),
-              Center(
-                child: Padding(
-                  padding:  EdgeInsets.only(
-                      top: height*0.02
-                  ),
-                  child: SizedBox(
-                    height: height*0.06,
-                    width: width*0.77,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: AppPrimaryColor.primaryColor
+        child: SingleChildScrollView(
+          child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                //const SizedBox(height: 70,),
+                const Text("Request Support", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold)),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding:  EdgeInsets.only(
+                          left: width*0.04,
+                          top: height*0.05
                       ),
-                      child: const Text('Submit',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
-                      onPressed: ()=> Get.to(()=> const DeactivateAccountPage()),
+                      child: CustomTextField(
+                        label: 'Name',
+                        controller: reqController.nameController,
+                        textInputType: TextInputType.text,
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.only(
+                        top: height*0.03,
+                        left: width*0.04,
+                      ),
+                      child: CustomTextField(
+                        label: 'Email',
+                        controller: reqController.emailController,
+                        textInputType: TextInputType.emailAddress,
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.only(
+                        top: height*0.03,
+                        left: width*0.04,
+                      ),
+                      child: CustomTextField(
+                        label: 'Phone',
+                        controller: reqController.phoneController,
+                        textInputType: TextInputType.phone,
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.only(
+                        top: height*0.03,
+                        left: width*0.04,
+                        bottom: height*0.05,
+                      ),
+                      child: CustomTextField(
+                        label: 'Message',
+                        controller: reqController.messageController,
+                        textInputType: TextInputType.text,
+                      ),
+                    ),
+                  ],
+                ),
+                Center(
+                  child: Padding(
+                    padding:  EdgeInsets.only(
+                        top: height*0.02
+                    ),
+                    child: SizedBox(
+                      height: height*0.06,
+                      width: width*0.77,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: AppPrimaryColor.primaryColor
+                        ),
+                        child: const Text('Submit',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
+                        onPressed: ()=> Get.to(()=> const DeactivateAccountPage()),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+        ),
         ),
       ),
     );
