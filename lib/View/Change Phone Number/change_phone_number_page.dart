@@ -20,7 +20,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text("Change Phone Number", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                const Text("Change Phone Number", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold)),
                 const Text("Update your phone number for added security"),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
