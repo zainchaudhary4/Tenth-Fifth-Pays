@@ -16,14 +16,15 @@ class ChangePhoneNumberPage extends StatelessWidget{
     return Scaffold(
         body: SafeArea(
         child: Padding(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(20),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text("Change Phone Number", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold)),
-                const Text("Update your phone number for added security", style: TextStyle(fontFamily: 'Arial',),),
+                const SizedBox(height: 20,),
+                const Text("Update your phone number for added security", style: TextStyle(fontFamily: 'Arial',  fontSize: 18, fontWeight: FontWeight.bold),),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +32,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                     Padding(
                       padding:  EdgeInsets.only(
                           left: width*0.04,
-                          top: height*0.03
+                          top: height*0.05
                       ),
                       child: CustomTextField(
                         label: 'Enter Current Phone Number',
@@ -42,7 +43,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                     ),
                     Padding(
                       padding:  EdgeInsets.only(
-                        top: height*0.02,
+                        top: height*0.03,
                         left: width*0.04,
                       ),
                       child: CustomTextField(
@@ -54,8 +55,9 @@ class ChangePhoneNumberPage extends StatelessWidget{
                     ),
                     Padding(
                       padding:  EdgeInsets.only(
-                        top: height*0.01,
-                        left: width*0.05,
+                        top: height*0.03,
+                        bottom: height*0.05,
+                        left: width*0.04,
                       ),
                       child: CustomTextField(
                         label: 'Re-Enter New Phone Number',

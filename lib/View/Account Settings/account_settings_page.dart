@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tenth_fifth_pays/View/Account%20Settings/manage_your_account.dart';
 import 'package:tenth_fifth_pays/View/Account%20Settings/manage_your_connected_accounts.dart';
 import 'package:tenth_fifth_pays/View/Account%20Settings/manage_your_payment_methods.dart';
 import 'package:tenth_fifth_pays/View/Account%20Settings/update_your_personal_information.dart';
+import 'package:tenth_fifth_pays/View/Change%20Password/change_password_page.dart';
+import 'package:tenth_fifth_pays/View/Change%20Phone%20Number/change_phone_number_page.dart';
 import '../Utils/colors.dart';
 import '../Widgets/custom_toggle_button.dart';
 
@@ -23,12 +26,12 @@ class AccountSettingsPage extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text("Account Settings", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Text("Get updates via email", style: TextStyle(fontFamily: 'Arial', fontSize: 18, fontWeight: FontWeight.bold)),
-                      SizedBox(width: 50,),
+                      const SizedBox(width: 50,),
                       CustomToggleButton(),
                     ],
                   ),
@@ -76,7 +79,7 @@ class AccountSettingsPage extends StatelessWidget{
                               backgroundColor: AppPrimaryColor.primaryColor
                           ),
                           child: const Text('Change Password',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
-                          onPressed: (){},
+                          onPressed: ()=> Get.to(()=> const ChangePasswordPage()),
                         ),
                       ),
                     ),
@@ -94,7 +97,7 @@ class AccountSettingsPage extends StatelessWidget{
                               backgroundColor: AppPrimaryColor.primaryColor
                           ),
                           child: const Text('Change Phone Number',style: TextStyle(fontFamily: 'Arial',fontSize: 20,color: Colors.white,fontWeight: FontWeight.w600),),
-                          onPressed: (){},
+                          onPressed: ()=> Get.to(()=> const ChangePhoneNumberPage()),
                         ),
                       ),
                     ),
