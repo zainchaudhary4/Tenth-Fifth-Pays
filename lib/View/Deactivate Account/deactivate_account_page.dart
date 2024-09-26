@@ -14,53 +14,56 @@ class DeactivateAccountPage extends StatelessWidget{
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(4),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text("Deactivate Account", style: TextStyle(fontFamily: "Arial", fontSize: 24, fontWeight: FontWeight.bold)),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:  EdgeInsets.only(
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding:  EdgeInsets.only(
+                          left: width*0.04,
+                          top: height*0.05
+                      ),
+                      child: CustomTextField(
+                        label: 'Enter Current Password',
+                        controller: accountController.emailController,
+                        obscureText: true,
+                        textInputType: TextInputType.emailAddress,
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.only(
+                        top: height*0.03,
                         left: width*0.04,
-                        top: height*0.03
+                      ),
+                      child: CustomTextField(
+                        label: 'Enter New Password',
+                        controller: accountController.newPassController,
+                        obscureText: true,
+                        textInputType: TextInputType.visiblePassword,
+                      ),
                     ),
-                    child: CustomTextField(
-                      label: 'Enter Current Password',
-                      controller: accountController.emailController,
-                      obscureText: true,
-                      textInputType: TextInputType.emailAddress,
+                    Padding(
+                      padding:  EdgeInsets.only(
+                        top: height*0.03,
+                        left: width*0.04,
+                        bottom: height*0.05,
+                      ),
+                      child: CustomTextField(
+                        label: 'Re-Enter New Password',
+                        controller: accountController.reEnterPassController,
+                        obscureText: true,
+                        textInputType: TextInputType.visiblePassword,
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.only(
-                      top: height*0.02,
-                      left: width*0.04,
-                    ),
-                    child: CustomTextField(
-                      label: 'Enter New Password',
-                      controller: accountController.newPassController,
-                      obscureText: true,
-                      textInputType: TextInputType.visiblePassword,
-                    ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.only(
-                      top: height*0.01,
-                      left: width*0.05,
-                    ),
-                    child: CustomTextField(
-                      label: 'Re-Enter New Password',
-                      controller: accountController.reEnterPassController,
-                      obscureText: true,
-                      textInputType: TextInputType.visiblePassword,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Center(
                 child: Padding(
@@ -80,7 +83,7 @@ class DeactivateAccountPage extends StatelessWidget{
                   ),
                 ),
               ),
-              const Text("Confirm that you wish to deactivate your account.", style: TextStyle(fontFamily: "Arial", fontSize: 18, fontWeight: FontWeight.bold)),
+              const Text("\nConfirm that you wish to deactivate your account.\n", style: TextStyle(fontFamily: "Arial", fontSize: 18, fontWeight: FontWeight.bold)),
               Center(
                 child: Padding(
                   padding:  EdgeInsets.only(
@@ -93,7 +96,7 @@ class DeactivateAccountPage extends StatelessWidget{
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppPrimaryColor.primaryColor
                       ),
-                      child: const Text('Confirm Deactivate Account',style: TextStyle(fontFamily: 'Arial',fontSize: 20,color: Colors.white,fontWeight: FontWeight.w600),),
+                      child: const Text('Confirm Deactivate Account',style: TextStyle(fontFamily: 'Arial',fontSize: 18,color: Colors.white,fontWeight: FontWeight.w600),),
                       onPressed: (){},
                     ),
                   ),
