@@ -14,11 +14,11 @@ class ManageYourConnectedAccounts extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Manage Your Connected Accounts Easily", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                Text("Manage Your Connected Accounts Easily", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold)),
                 SizedBox(height: 5,),
                 Text("Connect or disconnect third-party accounts like Google or "
                     "Apple for easier login and account management. Stay in "
-                    "control of your connected accounts.", style: TextStyle(fontSize: 18)),
+                    "control of your connected accounts.", style: TextStyle(fontFamily: 'Arial', fontSize: 18)),
               ],
             ),
           ),

@@ -13,11 +13,11 @@ class ManageYourAccount extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text("Manage Your Account",  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+              Text("Manage Your Account",  style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
               SizedBox(height: 5,),
               Text("Update your personal information, "
                   "preferences, and security settings "
-                  "for your Tenth Fifth Pays account.",  style: TextStyle(fontSize: 18,)),
+                  "for your Tenth Fifth Pays account.",  style: TextStyle(fontFamily: 'Arial', fontSize: 18,)),
             ],
           ),
         ),

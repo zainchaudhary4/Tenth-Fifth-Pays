@@ -22,23 +22,23 @@ class AccountSettingsPage extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("Account Settings", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                  const Text("Account Settings", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Text("Get updates via email", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                      const Text("Get updates via email", style: TextStyle(fontFamily: 'Arial', fontSize: 18, fontWeight: FontWeight.bold)),
                       CustomToggleButton(),
                     ],
                   ),
                   GestureDetector(
                     onTap: (){},
-                    child: const Text("Change Password", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
+                    child: const Text("Change Password", style: TextStyle(fontFamily: 'Arial', fontSize: 18, fontWeight: FontWeight.bold))),
                   GestureDetector(
                     onTap: (){},
-                    child: const Text("Delete Account", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
+                    child: const Text("Delete Account", style: TextStyle(fontFamily: 'Arial', fontSize: 18, fontWeight: FontWeight.bold))),
                   GestureDetector(
                     onTap: (){},
-                    child: const Text("Logout", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
+                    child: const Text("Logout", style: TextStyle(fontFamily: 'Arial', fontSize: 18, fontWeight: FontWeight.bold))),
                   const ManageYourAccount(),
                   const UpdateYourPersonalInformation(),
                   const ManageYourPaymentMethods(),

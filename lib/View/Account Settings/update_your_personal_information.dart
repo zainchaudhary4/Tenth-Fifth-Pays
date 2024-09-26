@@ -14,11 +14,11 @@ class UpdateYourPersonalInformation extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text("Update Your Personal Information "
-                  "with Ease",  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                  "with Ease",  style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
               SizedBox(height: 5,),
               Text("In the Profile Settings section, you can easily update your "
                   "personal information, including your name, last name, email, "
-                  "and phone number.", style: TextStyle(fontSize: 18),)
+                  "and phone number.", style: TextStyle(fontFamily: 'Arial', fontSize: 18),)
             ],
           ),
         ),

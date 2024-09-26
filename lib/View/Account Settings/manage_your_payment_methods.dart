@@ -11,11 +11,11 @@ class ManageYourPaymentMethods extends StatelessWidget{
           padding: const EdgeInsets.all(4),
           child: Column(
             children: [
-              const Text("Manage Your Payment Methods with Ease",  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              const Text("Manage Your Payment Methods with Ease",  style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold)),
               const SizedBox(height: 5,),
               const Text("In the Account Settings section, you can "
                   "easily add, edit, and remove your credit/debit "
-                  "cards for hassle-free payments.",  style: TextStyle(fontSize: 18)),
+                  "cards for hassle-free payments.",  style: TextStyle(fontFamily: 'Arial', fontSize: 18)),
               bulletItem("Add New Card"),
               bulletItem("Edit Card Details"),
               bulletItem("Remove Card"),
@@ -28,8 +28,7 @@ class ManageYourPaymentMethods extends StatelessWidget{
   Widget bulletItem(String text) {
     return ListTile(
       leading: const Text("•", style: TextStyle(fontSize: 24)), // Bullet point
-      title: Text(text, style: const TextStyle(fontSize: 18)),
-      // contentPadding: const EdgeInsets.only(bottom: 8),
+      title: Text(text, style: const TextStyle(fontFamily: 'Arial', fontSize: 18)),
     );
   }
 }
