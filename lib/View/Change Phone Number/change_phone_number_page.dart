@@ -76,7 +76,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                         style: ElevatedButton.styleFrom(
                             backgroundColor: AppPrimaryColor.primaryColor
                         ),
-                        child: const Text('Change Phone Number',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
+                        child: const Text('Submit',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
                         onPressed: (){},
                       ),
                     ),
