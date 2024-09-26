@@ -16,17 +16,19 @@ class AccountSettingsPage extends StatelessWidget{
     return Scaffold(
       body: SafeArea(
           child: Padding(
-              padding: const EdgeInsets.all(4),
+              padding: const EdgeInsets.all(20),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text("Account Settings", style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
+                  SizedBox(height: 20,),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Text("Get updates via email", style: TextStyle(fontFamily: 'Arial', fontSize: 18, fontWeight: FontWeight.bold)),
+                      SizedBox(width: 50,),
                       CustomToggleButton(),
                     ],
                   ),
@@ -91,7 +93,7 @@ class AccountSettingsPage extends StatelessWidget{
                           style: ElevatedButton.styleFrom(
                               backgroundColor: AppPrimaryColor.primaryColor
                           ),
-                          child: const Text('Change Phone Number',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
+                          child: const Text('Change Phone Number',style: TextStyle(fontFamily: 'Arial',fontSize: 20,color: Colors.white,fontWeight: FontWeight.w600),),
                           onPressed: (){},
                         ),
                       ),

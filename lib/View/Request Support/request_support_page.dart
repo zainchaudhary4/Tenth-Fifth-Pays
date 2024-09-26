@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tenth_fifth_pays/Controller/Request%20Support/request_support_controller.dart';
+import 'package:tenth_fifth_pays/View/Deactivate%20Account/deactivate_account_page.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
@@ -83,7 +85,7 @@ class RequestSupportPage extends StatelessWidget{
                           backgroundColor: AppPrimaryColor.primaryColor
                       ),
                       child: const Text('Submit',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
-                      onPressed: (){},
+                      onPressed: ()=> Get.to(()=> const DeactivateAccountPage()),
                     ),
                   ),
                 ),

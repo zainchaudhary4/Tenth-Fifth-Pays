@@ -5,23 +5,16 @@ class ManageYourAccount extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(4),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text("Manage Your Account",  style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
-              SizedBox(height: 5,),
-              Text("Update your personal information, "
-                  "preferences, and security settings "
-                  "for your Tenth Fifth Pays account.",  style: TextStyle(fontFamily: 'Arial', fontSize: 18,)),
-            ],
-          ),
-        ),
-      ),
+    return const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text("\nManage Your Account",  style: TextStyle(fontFamily: 'Arial', fontSize: 24, fontWeight: FontWeight.bold),),
+          SizedBox(height: 5,),
+          Text("Update your personal information, "
+              "preferences, and security settings "
+              "for your Tenth Fifth Pays account.",  style: TextStyle(fontFamily: 'Arial', fontSize: 18,)),
+        ],
     );
   }
 }

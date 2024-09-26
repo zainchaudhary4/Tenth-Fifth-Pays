@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tenth_fifth_pays/Controller/Change%20Phone%20Number/phone_number_controller.dart';
+import 'package:tenth_fifth_pays/View/User%20Guide/user_guide_page.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
@@ -77,7 +79,7 @@ class ChangePhoneNumberPage extends StatelessWidget{
                             backgroundColor: AppPrimaryColor.primaryColor
                         ),
                         child: const Text('Submit',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
-                        onPressed: (){},
+                        onPressed: ()=> Get.to(()=> const UserGuidePage())
                       ),
                     ),
                   ),

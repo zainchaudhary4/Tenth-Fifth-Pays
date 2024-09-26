@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tenth_fifth_pays/View/Account%20Settings/account_settings_page.dart';
 import '../../Controller/Photographic Release Page/photographic_release_controller.dart';
 import '../Utils/app_logo.dart';
 import '../Utils/colors.dart';
@@ -74,7 +75,7 @@ class PhotographicReleasePage extends StatelessWidget{
                           checkColor: Colors.white,
                         )),
                       ),
-                      Flexible(
+                      const Flexible(
                           child: Text('I accept Deee-Deee Photo Policy',style: TextStyle(fontFamily: 'Arial',fontSize: 14)))
                     ],
                   ),
@@ -92,9 +93,7 @@ class PhotographicReleasePage extends StatelessWidget{
                         backgroundColor: AppPrimaryColor.primaryColor
                     ),
                     child: const Text('Next',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
-                    onPressed: (){
-
-                    },
+                    onPressed: ()=> Get.to(()=>const AccountSettingsPage()),
                   ),
                 ),
               ),
