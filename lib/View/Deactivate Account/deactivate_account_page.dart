@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tenth_fifth_pays/Controller/Deactivate%20Account/deactivate_account_controller.dart';
+import 'package:tenth_fifth_pays/View/Home%20Page/home_page.dart';
 import '../Contacts And Favourites And Pics Page/contacts_and_favourites_page.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
@@ -80,7 +81,7 @@ class DeactivateAccountPage extends StatelessWidget{
                           backgroundColor: AppPrimaryColor.primaryColor
                       ),
                       child: const Text('Deactivate Account',style: TextStyle(fontFamily: 'Arial',fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),),
-                      onPressed: (){},
+                      onPressed: ()=> Get.to(()=> const HomePage()),
                     ),
                   ),
                 ),
@@ -99,7 +100,7 @@ class DeactivateAccountPage extends StatelessWidget{
                           backgroundColor: AppPrimaryColor.primaryColor
                       ),
                       child: const Text('Confirm Deactivate Account',style: TextStyle(fontFamily: 'Arial',fontSize: 18,color: Colors.white,fontWeight: FontWeight.w600),),
-                      onPressed: ()=> Get.to(()=> ContactsAndFavouritesPage()),
+                      onPressed: ()=> Get.to(()=> const ContactsAndFavouritesPage()),
                     ),
                   ),
                 ),
