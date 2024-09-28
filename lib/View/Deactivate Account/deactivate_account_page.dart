@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tenth_fifth_pays/Controller/Deactivate%20Account/deactivate_account_controller.dart';
-import 'package:tenth_fifth_pays/View/Contacts%20And%20Favourites%20And%20Pics/contacts_and_favourites_page.dart';
+import '../Contacts And Favourites And Pics Page/contacts_and_favourites_page.dart';
 import '../Utils/colors.dart';
 import '../Widgets/textfields.dart';
 
